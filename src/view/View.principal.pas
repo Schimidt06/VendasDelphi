@@ -1,38 +1,13 @@
-unit View.principal;
+unit View.Principal;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, Vcl.Imaging.jpeg, Vcl.StdCtrls,
-  ShellAPI;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TViewPrincipal = class(TForm)
-    MainMenu1: TMainMenu;
-    Cadastros1: TMenuItem;
-    Empresas1: TMenuItem;
-    Cidades1: TMenuItem;
-    Pessoas1: TMenuItem;
-    N1: TMenuItem;
-    Subgruposdeprodutos1: TMenuItem;
-    Produtos1: TMenuItem;
-    Movimentaes1: TMenuItem;
-    Vendas1: TMenuItem;
-    Financeiro1: TMenuItem;
-    ContasaReceber1: TMenuItem;
-    Fiscal1: TMenuItem;
-    Configuraes1: TMenuItem;
-    NFCe1: TMenuItem;
-    Panel1: TPanel;
-    Panel2: TPanel;
-    Image1: TImage;
-    Panel3: TPanel;
-    lbLinkedin: TLabel;
-    procedure lbLinkedinClick(Sender: TObject);
-    procedure lbLinkedinMouseEnter(Sender: TObject);
-    procedure lbLinkedinMouseLeave(Sender: TObject);
+  TForm1 = class(TForm)
   private
     { Private declarations }
   public
@@ -40,25 +15,10 @@ type
   end;
 
 var
-  ViewPrincipal: TViewPrincipal;
+  Form1: TForm1;
 
 implementation
 
 {$R *.dfm}
-
-procedure TViewPrincipal.lbLinkedinClick(Sender: TObject);
-begin
-    ShellExecute(0, nil, PChar(TLabel(Sender).Caption), '', '', SW_ShowNormal);
-end;
-
-procedure TViewPrincipal.lbLinkedinMouseEnter(Sender: TObject);
-begin
-    TLabel (Sender) .Font.Color := clRed;
-end;
-
-procedure TViewPrincipal.lbLinkedinMouseLeave(Sender: TObject);
-begin
-    TLabel (Sender) .Font.Color := clWindowText;
-end;
 
 end.
