@@ -2,13 +2,13 @@ program ProjetoDelphiVendas;
 
 uses
   Vcl.Forms,
-  View.Principal in 'View\View.Principal.pas' {Form1};
+  View.Principal in 'View\View.Principal.pas' {ViewPrincipal};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TViewPrincipal, ViewPrincipal);
   Application.Run;
 end.
