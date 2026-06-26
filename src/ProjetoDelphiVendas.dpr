@@ -2,7 +2,7 @@ program ProjetoDelphiVendas;
 
 uses
   Vcl.Forms,
-  View.Principal in 'View\View.Principal.pas' {ViewPrincipal};
+  View.Principal in '..\View.Principal.pas' {ViewPrincipal};
 
 {$R *.res}
 
